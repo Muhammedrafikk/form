@@ -31,6 +31,7 @@ urlpatterns = (
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 )
 
+
 admin.site.site_header = "PROJECT Administration"
 admin.site.site_title = "PROJECT Admin Portal"
 admin.site.index_title = "Welcome to PROJECT Admin Portal"

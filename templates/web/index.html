@@ -2,29 +2,29 @@
 {% load static %}
 {% block content %}
 
-  
+
   <div class="content">
-    
+
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10">
-          
+
           <div class="row justify-content-center">
             <div class="col-md-6">
-              
-              <h3 class="heading mb-4">Let's talk about everything!</h3>
+
+              <h3 class="heading mb-4">talk about everything!</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?</p>
 
               <p><img src="{% static 'web/images/undraw-contact.svg' %}" alt="Image" class="img-fluid"></p>
 
             </div>
             <div class="col-md-6">
-              
+
               <form class="mb-5" action="{% url 'web:index' %}" id="contact-form" name="ContactForm" method="POST">
                 <a href="#" id="whatsapp-link" style="display: none;" target="_blank"></a>
 
                 {% csrf_token %}
- 
+
                 <div class="row">
                   <div class="col-md-12 form-group">
                     {{form.name}}
@@ -44,7 +44,7 @@
                   <div class="col-md-12 form-group">
                     {{form.message}}
                   </div>
-                </div>  
+                </div>
                 <div class="row">
                   <div class="col-12">
                     <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
@@ -53,7 +53,7 @@
                 </div>
               </form>
 
-              <div id="form-message-warning mt-4"></div> 
+              <div id="form-message-warning mt-4"></div>
               <div id="form-message-success">
                 Your message was sent, thank you!
               </div>
@@ -64,6 +64,6 @@
     </div>
 
   </div>
-    
-    
+
+
   {% endblock %}
